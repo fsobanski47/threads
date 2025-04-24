@@ -25,7 +25,6 @@ namespace threads
                 }
                 Console.WriteLine("Enter the seed for random number generation: ");
                 int seed = int.Parse(Console.ReadLine());
-                ParallelOptions opt = new ParallelOptions() { MaxDegreeOfParallelism = threadCount };
                 Matrix A = new Matrix(size, seed);
                 Matrix B = new Matrix(size, seed + 10);
                 var watch = System.Diagnostics.Stopwatch.StartNew();
