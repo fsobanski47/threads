@@ -105,10 +105,7 @@ namespace threads
                             {
                                 sum += Content[j][l] * second.Content[l][k];
                             }
-
-                            mtx.WaitOne();
                             result.Content[j][k] = sum;
-                            mtx.ReleaseMutex();
                         }
                     }
                 });
